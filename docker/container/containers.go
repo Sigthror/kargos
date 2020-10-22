@@ -15,6 +15,7 @@ func Generate() {
 	}
 	fmt.Println(`Containers | size=13`)
 	lines := strings.Split(string(out), "\n")
+	fmt.Printf("-- %s | font=monospace\n", lines[0])
 	for i := 1; i < (len(lines) - 1); i++ {
 		fmt.Printf(`-- %s | font=monospace onclick=bash bash='docker stop %s'`, lines[i], getContainerName(lines[i]))
 	}
