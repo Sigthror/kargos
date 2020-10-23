@@ -17,6 +17,6 @@ func Generate() {
 	lines := strings.Split(string(out), "\n")
 	fmt.Printf("-- %s | font=monospace\n", lines[0])
 	for i := 1; i < (len(lines) - 1); i++ {
-		fmt.Printf(`-- %s | font=monospace onclick=bash bash='docker stop %s'`, lines[i], getContainerName(lines[i]))
+		fmt.Printf("-- %s | font=monospace onclick=bash bash='docker stop %s' \n", lines[i], getContainerName(lines[i]))
 	}
 }
