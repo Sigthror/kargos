@@ -9,4 +9,4 @@ COPY ./ /pre-commit
 
 RUN pre-commit install-hooks
 
-CMD ["pre-commit", "run"]
+CMD ["pre-commit", "run", "--color", "never"]
