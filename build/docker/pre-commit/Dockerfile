@@ -5,5 +5,8 @@ RUN apk add --no-cache git && \
     mkdir -p /pre-commit
 
 WORKDIR /pre-commit
+COPY ./ /pre-commit
+
+RUN pre-commit install-hooks
 
 CMD ["pre-commit", "run"]
