@@ -1,5 +1,9 @@
 GO_VERSION=1.15.3
 
+.PHONY: git-init
+git-init:
+	git config core.hooksPath .githooks
+
 .PHONY: build-docker-plugin
 build-docker-plugin:
 	@docker run --rm -v ${PWD}:/project -w /project golang:${GO_VERSION}-alpine3.12 \
